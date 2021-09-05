@@ -42,9 +42,9 @@ jobs:
           npm run build --if-present
           npm test  
       - name: npm lint 
-        run: eslint --init
-      - name: Install modules
-        run: yarn add eslint-lint  
-      - name: Run ESLint
-        run:  eslint . --ext .js,.jsx,.ts,.tsx
+        uses: actions/checkout@v2
+      - name: Installing node_modules
+        run: npm install
+      - name: Running ESLint
+        run: npm run lint
       
