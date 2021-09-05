@@ -49,7 +49,7 @@ jobs:
       - name: Run lint
         run: yarn run eslint --init
       - name: make test-coverage
-      - uses: paambaati/codeclimate-action@v2.2.4
+        uses: paambaati/codeclimate-action@v2.2.4
         with:
          coverageCommand: yarn coverage
       - name: Coveralls
