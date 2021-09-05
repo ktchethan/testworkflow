@@ -44,9 +44,8 @@ jobs:
       - name: npm lint 
         uses: actions/checkout@v2
       - name: Installing node_modules
-        run: |
-           npm install eslint --save-dev
-           npm init
+        run: |           
+           npm eslint --init
       - name: Running ESLint
         run: npm run eslint
       
