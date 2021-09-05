@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: eslint
+        uses: stefanoeb/eslint-action@1.0.2
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
