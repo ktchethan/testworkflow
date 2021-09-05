@@ -44,6 +44,8 @@ jobs:
           npm test              
       - name: Installing node_modules
         run: npm install eslint --global
+      - name: Install Yarn
+        run: npm install -g yarn
       - name: Run lint
-        run: npm eslint --init
+        run: yarn run eslint --init
       
