@@ -45,7 +45,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Installing node_modules
         run: |           
-           npm eslint --init
-      - name: Running ESLint
-        run: npm run eslint
+           eslint . --ext .js,.jsx,.ts,.tsx
+      
       
