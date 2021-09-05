@@ -38,6 +38,8 @@ jobs:
             ${{ runner.os }}-
       - name: Install dependencies
         run: npm ci      
+      - name: Installing nyc Istanbul
+        run: npm install nyc --save-dev
       - name: npm build, and test
         run: |
           npm run build --if-present
@@ -49,9 +51,7 @@ jobs:
       - name: Run lint
         run: yarn run eslint --init
       - name: Installing coverage
-        run: npm install check-code-coverage      
-      - name: Installing nyc Istanbul
-        run: npm install nyc --save-dev
+        run: npm install check-code-coverage            
       - name: Upload coverage to Codecov
         # finally run the tests
         run: npm test      
