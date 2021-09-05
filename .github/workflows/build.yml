@@ -48,8 +48,6 @@ jobs:
         run: npm install -g yarn
       - name: Run lint
         run: yarn run eslint --init
-      - name: setting lint on file extension
-        run: yarn run eslint . --ext .js,.jsx,.ts,.tsx
       - name: Installing coverage
         run: npm install coverage
       - name: Upload coverage to Codecov
