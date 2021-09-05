@@ -41,5 +41,4 @@ jobs:
         run: |
           npm run build --if-present
           npm test      
-      - name: Check types
-        run: npm run tsc
+      
