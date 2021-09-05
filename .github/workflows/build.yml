@@ -52,4 +52,12 @@ jobs:
         uses: platisd/duplicate-code-detection-tool@master
         with:
           directories: "test/"
+          # Only examine .h and .cpp files
+          file_extensions: "sh, js"
+          # Only report similarities above 5%
+          ignore_below: 5
+          # If a file is more than 70% similar to another, then the job fails
+          fail_above: 70
+          # If a file is more than 15% similar to another, show a warning symbol in the report
+          warn_above: 15
       
