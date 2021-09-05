@@ -40,5 +40,14 @@ jobs:
       - name: npm build, and test
         run: |
           npm run build --if-present
-          npm test      
+          npm test  
+      - name: npm lint 
+      - uses: actions/checkout@v1
+      - uses: stefanoeb/eslint-action@1.0.2
+        with:
+          files: src/
+      - name: Install modules
+        run: yarn
+      - name: Run ESLint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
       
