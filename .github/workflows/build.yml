@@ -43,8 +43,6 @@ jobs:
           npm test  
       - name: npm lint 
         uses: stefanoeb/eslint-action@1.0.2
-        with:
-          files: src/
       - name: Install modules
         run: yarn
       - name: Run ESLint
