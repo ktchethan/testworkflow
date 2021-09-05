@@ -54,10 +54,7 @@ jobs:
         run: npm install nyc --save-dev
       - name: Upload coverage to Codecov
         # finally run the tests
-        run: npm test -- --coverage 
-      - uses: romeovs/lcov-reporter-action@v0.2.16
-        with:
-          lcov-file: ./coverage/lcov.info      
+        run: npm test      
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
