@@ -1,0 +1,29 @@
+{
+  "name": "shift-left-exer",
+  "version": "1.0.0",
+  "description": "Try your skills at making a pipeline to shift-left by failing fast",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npx mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devops-exer/shift-left-exer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devops-exer/shift-left-exer/issues"
+  },
+  "homepage": "https://github.com/devops-exer/shift-left-exer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.15.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^8.2.1"
+  }
+}
