@@ -43,7 +43,7 @@ jobs:
           npm run build --if-present
           npm test              
       - name: Installing node_modules
-        run: npm install lint
+        run: npm install eslint --global
       - name: Run lint
-        run: npm run lint .
+        run: npm eslint --init
       
