@@ -44,7 +44,9 @@ jobs:
       - name: npm lint 
         uses: stefanoeb/eslint-action@1.0.2
       - name: Install modules
-        run: yarn
+        run: yarn      
       - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: |
+          eslint --init
+          eslint . --ext .js,.jsx,.ts,.tsx
       
