@@ -42,10 +42,9 @@ jobs:
       - name: npm build, and test
         run: |
           npm run build --if-present
-          npm test        
-      - uses: actions/checkout@v2
+          npm test              
       - name: Installing node_modules
-        run: npm install
+        run: npm install lint
       - name: Running ESLint
         run: npm run lint
       
