@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         node: ["12.22.1", "14.16.1", "15.14.0", "16.1.0"]        
-    runs-on: ubuntu-latest    
+    runs-on: [self-hosted, linux, x64, gpu]    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -39,7 +39,7 @@ jobs:
         run: npm ci
   lint_and_tsc:
     needs: checkout_and_install
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, gpu]
     steps:
       - name: Lint
         run: npm run lint
@@ -48,7 +48,7 @@ jobs:
   build_and_test:
     needs: 
       - lint_and_tsc      
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, gpu]
     steps:      
       - name: npm build, and test
         run: |
@@ -58,7 +58,7 @@ jobs:
     name: Coverage
     needs: 
       - build_and_test
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, gpu]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2.4.0
