@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         node: ["12.22.1", "14.16.1", "15.14.0", "16.1.0"]        
-    runs-on: [self-hosted, linux, x64, gpu]    
+    runs-on: ubuntu-latest    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -45,8 +45,7 @@ jobs:
         run: |
           npm run build --if-present
           npm test:unit      
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+      - name: coverage report
         with:
           node-version: 15
       - run: npm ci
