@@ -8,6 +8,8 @@ on:
   release:
     types:
       - staging
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 jobs:
   checkout_and_install:
     strategy:
