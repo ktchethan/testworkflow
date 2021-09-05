@@ -45,6 +45,6 @@ jobs:
           npm test              
       - name: Installing node_modules
         run: npm install lint
-      - name: Running ESLint
-        run: npm run lint
+      - name: Run ESLint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
       
