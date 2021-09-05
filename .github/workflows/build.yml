@@ -49,15 +49,10 @@ jobs:
       - name: Run lint
         run: yarn run eslint --init
       - name: Installing coverage
-        run: npm install coverage      
+        run: npm install check-code-coverage      
       - name: Upload coverage to Codecov
         # finally run the tests
-        run: npm test -- -- coverage
-      - name: Installing lcov-reporter
-        uses: romeovs/lcov-reporter-action@v0.2.16
-        with:
-          lcov-file: ./coverage/lcov.info
-        # Save coverage report in Coveralls
+        run: npm test 
       - name: Upload coverage to Codecov 
         uses: codecov/codecov-action@v1
       - name: Check for duplicate code
