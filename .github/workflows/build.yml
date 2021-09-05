@@ -42,11 +42,9 @@ jobs:
           npm run build --if-present
           npm test  
       - name: npm lint 
-        uses: stefanoeb/eslint-action@1.0.2
+        run: eslint --init
       - name: Install modules
         run: yarn add eslint-lint  
       - name: Run ESLint
-        run: |
-          eslint --init
-          eslint . --ext .js,.jsx,.ts,.tsx
+        run:  eslint . --ext .js,.jsx,.ts,.tsx
       
