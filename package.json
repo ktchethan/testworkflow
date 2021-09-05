@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "npx mocha --exit",
-    "coverage": "nyc --reporter=lcov npm test"
+    "coverage": "npx nyc report --reporter=lcov"
   },
   "repository": {
     "type": "git",
