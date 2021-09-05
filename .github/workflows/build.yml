@@ -45,5 +45,5 @@ jobs:
       - name: Installing node_modules
         run: npm install lint
       - name: Run lint
-        run: npm run lint
+        run: npm run lint .
       
