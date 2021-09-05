@@ -14,7 +14,8 @@ jobs:
   checkout_and_install:
     strategy:
       matrix:
-        node: ["12.22.1", "14.16.1", "15.14.0", "16.1.0"]        
+         node: ["15.14.0"]        
+        #node: ["12.22.1", "14.16.1", "15.14.0", "16.1.0"]        
     runs-on: ubuntu-latest    
     steps:
       - name: Checkout repository
@@ -46,5 +47,5 @@ jobs:
       - name: Installing node_modules
         run: npm install lint
       - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        uses: eslint/github-action@v0
       
