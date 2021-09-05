@@ -19,8 +19,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: eslint
-        uses: stefanoeb/eslint-action@1.0.2
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
@@ -44,11 +42,10 @@ jobs:
       - name: npm build, and test
         run: |
           npm run build --if-present
-          npm test  
-      - name: npm lint 
-        uses: actions/checkout@v2
-      - name: Install modules
-        run: yarn
-      - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+          npm test        
+      - uses: actions/checkout@v2
+      - name: Installing node_modules
+        run: npm install
+      - name: Running ESLint
+        run: npm run lint
       
