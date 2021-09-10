@@ -1,11 +1,10 @@
 name: Duplicate code
 
-on: pull_request
+on: push
 
 jobs:
   duplicate-code-check:
-    name: Check for duplicate code
-    if: github.event.issue.pull_request
+    name: Check for duplicate code    
     runs-on: ubuntu-20.04    
     steps:
       - name: Check for duplicate code
