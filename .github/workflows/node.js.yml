@@ -49,4 +49,4 @@ jobs:
         projectBaseDir: testworkflow/testworkflow
         args: >
           -Dsonar.organization=ktchethan
-          -Dsonar.projectKey=testworkflow
+          -Dsonar.projectKey=ktchethan_testworkflow
