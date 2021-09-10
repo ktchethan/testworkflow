@@ -1,9 +1,6 @@
 name: CI/CD
 
-on:
-  push:
-    branches: [ newtestckt ]
-  pull_request:
+on: pull_request
   
 jobs:
   build:
