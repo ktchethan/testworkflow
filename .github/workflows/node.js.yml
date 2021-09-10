@@ -4,8 +4,7 @@ on:
   push:
     branches: [ newtestckt ]
   pull_request:
-    branches: [ main,newtestckt ]
-
+  
 jobs:
   build:
   
