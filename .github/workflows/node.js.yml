@@ -36,5 +36,6 @@ jobs:
     - name: Run the tests 
       run: npm test 
       
-    - name: Run the jsinspect 
-      run: npm jsinspect "." 
+    - name: Run the jsinspect
+      with:      
+        script: jsinspect "." 
