@@ -41,6 +41,7 @@ jobs:
     needs: checkout_and_install
     runs-on: ubuntu-latest
     steps:
+     #Since jobs getting executed in git cloud the previous state is getting lost, so recalling checkout and setup node steps in all the jobs 
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Use Node.js
@@ -62,6 +63,7 @@ jobs:
       - checkout_and_install      
     runs-on: ubuntu-latest
     steps:
+     #Since jobs getting executed in git cloud the previous state is getting lost, so recalling checkout and setup node steps in all the jobs 
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Use Node.js
@@ -82,6 +84,13 @@ jobs:
       - build_and_test
     runs-on: ubuntu-latest
     steps:
+     #Since jobs getting executed in git cloud the previous state is getting lost, so recalling checkout and setup node steps in all the jobs 
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
       - name: Install jsinspect
         run: npm install -g jsinspect	
       - name: Run the jsinspect
@@ -92,6 +101,13 @@ jobs:
       - build_and_test
     runs-on: ubuntu-latest
     steps:
+     #Since jobs getting executed in git cloud the previous state is getting lost, so recalling checkout and setup node steps in all the jobs 
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
