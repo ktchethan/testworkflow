@@ -54,7 +54,7 @@ jobs:
       - name: Install jsinspect
         run: npm install -g jsinspect	
       - name: Run the jsinspect
-        run: jsinspect --ignore "test" "." 	
+        run: jsinspect --ignore "." "." 	
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
